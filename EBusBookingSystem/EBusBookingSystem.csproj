@@ -1,0 +1,386 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5F6056A-03C6-4953-B34E-C864F14B2A31}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EBusBookingSystem</RootNamespace>
+    <AssemblyName>EBusBookingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44370</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\css\bootstrap.css" />
+    <Content Include="Admin\css\dscountdown.css" />
+    <Content Include="Admin\css\font-awesome.css" />
+    <Content Include="Admin\css\galleryeffect.css" />
+    <Content Include="Admin\css\jquery.flipster.css" />
+    <Content Include="Admin\css\owl.carousel.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\images\ab.jpg" />
+    <Content Include="Admin\images\arrows.png" />
+    <Content Include="Admin\images\banner22.jpg" />
+    <Content Include="Admin\images\g1.jpg" />
+    <Content Include="Admin\images\g2.jpg" />
+    <Content Include="Admin\images\g3.jpg" />
+    <Content Include="Admin\images\g4.jpg" />
+    <Content Include="Admin\images\g5.jpg" />
+    <Content Include="Admin\images\g6.jpg" />
+    <Content Include="Admin\images\g7.jpg" />
+    <Content Include="Admin\images\g8.jpg" />
+    <Content Include="Admin\images\s1.jpg" />
+    <Content Include="Admin\images\s2.jpg" />
+    <Content Include="Admin\images\s3.jpg" />
+    <Content Include="Admin\images\s4.jpg" />
+    <Content Include="Admin\images\s5.jpg" />
+    <Content Include="Admin\images\up.png" />
+    <Content Include="Admin\js\bootstrap.js" />
+    <Content Include="Admin\js\demo-1.js" />
+    <Content Include="Admin\js\dscountdown.min.js" />
+    <Content Include="Admin\js\easing.js" />
+    <Content Include="Admin\js\jquery-2.1.4.min.js" />
+    <Content Include="Admin\js\jquery.flexisel.js" />
+    <Content Include="Admin\js\jquery.flipster.js" />
+    <Content Include="Admin\js\modernizr.custom.js" />
+    <Content Include="Admin\js\move-top.js" />
+    <Content Include="Admin\js\numscroller-1.0.js" />
+    <Content Include="Admin\js\owl.carousel.js" />
+    <Content Include="Admin\js\responsiveslides.min.js" />
+    <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\Userdata.aspx" />
+    <Content Include="Admin\Feedback.aspx" />
+    <Content Include="Admin\Booking.aspx" />
+    <Content Include="App_Data\BusBookingDT.mdf" />
+    <Content Include="App_Data\BusBookingDT_log.ldf">
+      <DependentUpon>BusBookingDT.mdf</DependentUpon>
+    </Content>
+    <Content Include="Booking\Booking.aspx" />
+    <Content Include="Booking\css\main.css" />
+    <Content Include="Booking\js\global.js" />
+    <Content Include="Booking\vendor\datepicker\daterangepicker.css" />
+    <Content Include="Booking\vendor\datepicker\daterangepicker.js" />
+    <Content Include="Booking\vendor\datepicker\moment.min.js" />
+    <Content Include="Booking\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Booking\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Booking\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Booking\vendor\jquery\jquery.js" />
+    <Content Include="Booking\vendor\jquery\jquery.min.js" />
+    <Content Include="Booking\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Booking\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Booking\vendor\select2\select2.min.css" />
+    <Content Include="Booking\vendor\select2\select2.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="User\css\bootstrap.css" />
+    <Content Include="User\css\dscountdown.css" />
+    <Content Include="User\css\font-awesome.css" />
+    <Content Include="User\css\galleryeffect.css" />
+    <Content Include="User\css\jquery.flipster.css" />
+    <Content Include="User\css\owl.carousel.css" />
+    <Content Include="User\css\style.css" />
+    <Content Include="User\fonts\fontawesome-webfont.svg" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="User\images\arrows.png" />
+    <Content Include="User\images\banner22.jpg" />
+    <Content Include="User\images\ab.jpg" />
+    <Content Include="User\images\s1.jpg" />
+    <Content Include="User\images\g1.jpg" />
+    <Content Include="User\images\s2.jpg" />
+    <Content Include="User\images\g2.jpg" />
+    <Content Include="User\images\s3.jpg" />
+    <Content Include="User\images\g3.jpg" />
+    <Content Include="User\images\s4.jpg" />
+    <Content Include="User\images\g4.jpg" />
+    <Content Include="User\images\s5.jpg" />
+    <Content Include="User\images\g5.jpg" />
+    <Content Include="User\images\g6.jpg" />
+    <Content Include="User\images\g7.jpg" />
+    <Content Include="User\images\g8.jpg" />
+    <Content Include="User\images\up.png" />
+    <Content Include="User\js\bootstrap.js" />
+    <Content Include="User\js\demo-1.js" />
+    <Content Include="User\js\dscountdown.min.js" />
+    <Content Include="User\js\easing.js" />
+    <Content Include="User\js\jquery-2.1.4.min.js" />
+    <Content Include="User\js\jquery.flexisel.js" />
+    <Content Include="User\js\jquery.flipster.js" />
+    <Content Include="User\js\modernizr.custom.js" />
+    <Content Include="User\js\move-top.js" />
+    <Content Include="User\js\numscroller-1.0.js" />
+    <Content Include="User\js\owl.carousel.js" />
+    <Content Include="User\js\responsiveslides.min.js" />
+    <Content Include="User\Home.aspx" />
+    <Content Include="User\About.aspx" />
+    <Content Include="User\Gallery.aspx" />
+    <Content Include="User\Services.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\Registration.aspx" />
+    <Content Include="User\Login.aspx" />
+    <Content Include="User\ForgotPass.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Userdata.aspx.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Userdata.aspx.designer.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Booking\Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booking\Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Usermaster.Master.cs">
+      <DependentUpon>Usermaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Usermaster.Master.designer.cs">
+      <DependentUpon>Usermaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ForgotPass.aspx.cs">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ForgotPass.aspx.designer.cs">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Booking\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Admin\AdminMaster.Master" />
+    <None Include="packages.config" />
+    <Content Include="User\Usermaster.Master" />
+    <Content Include="User\fonts\fontawesome-webfont.eot" />
+    <Content Include="User\fonts\fontawesome-webfont.ttf" />
+    <Content Include="User\fonts\fontawesome-webfont.woff" />
+    <Content Include="User\fonts\fontawesome-webfont.woff2" />
+    <Content Include="User\fonts\FontAwesome.otf" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Booking\images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58858</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
